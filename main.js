@@ -392,7 +392,6 @@ function updateGameArea() {
         
     } else if (game4) {
         isInGame = true;
-        playerVelocity = 1;
         
         for (let i in box){
             box[i].update();
