@@ -394,9 +394,9 @@ function updateGameArea() {
         isInGame = true;
         
         for (let i in box){
-            box[i].update();
             containerBox[i].updateColigion();
             containerBox[i].update();
+            box[i].update();
             
             controllerGame4(myGamePiece.crashWith(box[i]), box[i]);   
 
@@ -404,15 +404,24 @@ function updateGameArea() {
                 moveRect(box[i]);
             }
 
-            console.log((box[0].y + (box[0].height )), (containerBox[0].y + containerBox[0].height), (box[0].x + (box[0].width)), (containerBox[0].x + containerBox[0].width));
+            // console.log((box[0].y + (box[0].height )), (containerBox[0].y + containerBox[0].height), (box[0].x + (box[0].width)), (containerBox[0].x + containerBox[0].width));
 
-            if((box[i].y + (box[i].height)) == containerBox[i].y + containerBox[i].height &&
-                (box[i].x + (box[i].width)) == containerBox[i].x + containerBox[i].width 
-                && !containerBox[i].boxIn ){
-                containerBox[i].color = "lightgreen";
-                pointCount += 1;
-                containerBox[i].boxIn = true;
-            }
+            // if((box[i].y + (box[i].height)) == containerBox[i].y + containerBox[i].height &&
+            //     (box[i].x + (box[i].width)) == containerBox[i].x + containerBox[i].width 
+            //     && !containerBox[i].boxIn ){
+                
+            // }
+
+            if((box[i].y + box[i].height) > containerBox[i].y &&
+                box[i].y < (containerBox[i].y + containerBox[i].height) &&
+                (box[i].x + box[i].width) > containerBox[i].x &&
+                box[i].x < (containerBox[i].x + containerBox[i].width) &&
+                !containerBox[i].boxIn) 
+                {
+                    containerBox[i].color = "lightgreen";
+                    pointCount += 1;
+                    containerBox[i].boxIn = true;
+                }
 
             if(pointCount == containerBox.length){
                 isInGame = true;
