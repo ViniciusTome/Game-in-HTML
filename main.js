@@ -404,14 +404,6 @@ function updateGameArea() {
                 moveRect(box[i]);
             }
 
-            // console.log((box[0].y + (box[0].height )), (containerBox[0].y + containerBox[0].height), (box[0].x + (box[0].width)), (containerBox[0].x + containerBox[0].width));
-
-            // if((box[i].y + (box[i].height)) == containerBox[i].y + containerBox[i].height &&
-            //     (box[i].x + (box[i].width)) == containerBox[i].x + containerBox[i].width 
-            //     && !containerBox[i].boxIn ){
-                
-            // }
-
             if((box[i].y + box[i].height) > containerBox[i].y &&
                 box[i].y < (containerBox[i].y + containerBox[i].height) &&
                 (box[i].x + box[i].width) > containerBox[i].x &&
