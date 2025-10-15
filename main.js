@@ -1,5 +1,3 @@
-HEAD
-
 let myGamePiece;
 let keys = {};
 let game = [1, 2, 3, 4, 5];
