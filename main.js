@@ -100,7 +100,7 @@ function startGame(){
 
             box[i]  = new boxComponent(50, 50, "aqua", (100 * (i+1)) , 150, false);
 
-            
+            containerBox[i] = new boxComponent(50, 50, "transparent", randomX, (60 * (i+1)));
 
         }
     }
@@ -117,7 +117,7 @@ function startGame(){
         }
     }
     if(gameInput) {
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 5; i++) {
             randomX = Math.floor(Math.random() * (700 - 30 + 1)) + 30;
 
             containerBox[i] = new boxComponent(50, 50, "transparent", randomX, (60 * (i+1)));
