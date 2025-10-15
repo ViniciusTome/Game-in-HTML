@@ -1,3 +1,4 @@
+HEAD
 
 let myGamePiece;
 let keys = {};
